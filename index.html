@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schlichte Seite</title>
+    <title>Schlichte Seite mit Animation</title>
     <style>
         body {
             margin: 0;
@@ -34,12 +34,34 @@
             line-height: 1.6;
             color: #333;
         }
+
+        .hand-waving {
+            font-size: 3em;
+            display: inline-block;
+            animation: wave 2s infinite;
+            transform-origin: 70% 70%;
+            margin-top: 30px;
+        }
+
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(14deg); }
+            20% { transform: rotate(-8deg); }
+            30% { transform: rotate(14deg); }
+            40% { transform: rotate(-4deg); }
+            50% { transform: rotate(10deg); }
+            60% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Hallo</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ipsum a turpis eleifend, id sodales velit convallis. Vestibulum eget est eu odio ullamcorper dictum.</p>
+        
+        <!-- Winkende Hand -->
+        <div class="hand-waving">👋</div>
     </div>
 </body>
 </html>
